@@ -1,7 +1,10 @@
 @import "_component.scss";
 
 
-//////?start base 
+//////?start base
+html{
+   scroll-behavior: smooth;
+} 
 body{
    font-family: 'Overpass', sans-serif;
 }
@@ -12,41 +15,44 @@ body{
    box-sizing: border-box;
    border: none;
    outline: none;
+   text-decoration: none;
 }
 //////?end base
 
 
 //////?start header 
 header{
+   position: relative;
+   font-family: 'Alkatra', cursive;
    color: white;
-   width: 100vw;
+   width: 100%;
    height: 75vh;
-   .bg-header{
+   .Bg-header{
       position: absolute;
       top: 0;
       left: 0;
       object-fit: fill;
-      width: 100vw;
+      width: 100%;
       height: 75vh;
-      z-index: -1;
+      z-index: -13;
    }
 }
 
-.navbar{
-   @include container();
+.Navbar{
+   @include container(93%);
    display: flex;
    justify-content: space-between;
    position: sticky;
    top: 0;
    padding: 10px 0px;
 }
-.logo h1{
+.Logo h1{
    @include lineargradient-text($linear-gradient);
    font-weight: 1000;
-   font-size: 40px;
+   font-size: 2.3em;
    letter-spacing: 3px;
 }
-.nav{
+.Nav{
    display: flex;
    list-style: none;
    li{
@@ -63,10 +69,10 @@ header{
    }
 }
 
-.intro{
-   @include container();
+.Intro{
+   @include container(93%);
    padding: 100px 0px;
-   font-size: 2.3em;
+   font-size: 2.9em;
    line-height: 1.3;
    letter-spacing: 3px;
    display: flex;
@@ -75,4 +81,92 @@ header{
       @include lineargradient-text($linear-gradient);
       border-bottom: 2px solid $primary-color;
    }
+}
+//////?end header 
+
+//////?start main
+main{
+   @include container(93%);
+   margin-top: 6%;
+}
+
+//////?Top section
+.Top{
+   box-shadow: 3px 3px 15px rgb(226, 225, 225);
+   padding: 2em;
+   border-radius: $border-radius;
+}
+.Title{
+   width: fit-content;
+   height: fit-content;
+   background: $linear-gradient;
+   padding: 13px;
+   border-radius: 0px 50px;
+   h2{
+      width: fit-content;
+      font-size: 30px;
+      color: white;
+   }
+}
+
+.Top-House{
+   display: flex;
+   gap: 3%;
+}
+
+//////?Create Card 
+.Card-Item{
+   position: relative;
+   width: 17rem;
+   height: 20rem;
+   overflow: hidden;
+   margin: 3% 0px;
+   box-shadow: 3px 3px 20px rgb(211, 211, 211);
+   border-radius: $border-radius;
+   &:hover .Caption{
+      bottom: 0px;
+      background: white;
+      color: black;
+   }
+   img{
+      @include lineargradient-text($linear-gradient);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: $border-radius;
+      z-index: -1;
+   }
+}
+
+.Caption{
+   position: absolute;
+   border-top-right-radius: $border-radius;
+   border-top-left-radius: $border-radius;
+   bottom: -15%;
+   padding: 15px;
+   color: white;
+   width: 100%;
+   transition: all .5s ease;
+   h3{
+      color: $primary-color;
+      margin-bottom: 3px;
+   }
+   p{
+      font-size: 15px;
+      margin-bottom: 15px;
+   }
+}
+.ShopBtn{
+   display: flex;
+   justify-content: space-between;
+}
+button{
+   padding: 5px 17px;
+   border-radius: $border-radius;
+}
+.BuyBtn{
+   @include btn-design($primary-color);
+}
+.AddBtn{
+   @include btn-design($AddBtn-color);
 }
