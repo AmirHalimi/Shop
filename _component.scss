@@ -1,2 +1,19 @@
 @import
 url('https://fonts.googleapis.com/css2?family=Alkatra&family=Overpass:ital,wght@0,400;1,300&display=swap');
+
+//////?variables
+$primary-color: #ED4264;
+$linear-gradient: linear-gradient(to right , $primary-color 40%, #FFEDBC);
+
+
+//////?mixin
+@mixin container(){
+   width: 95%;
+   margin: auto;
+}
+
+@mixin lineargradient-text($bg-color){
+   background: $bg-color;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
