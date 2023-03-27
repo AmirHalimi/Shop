@@ -1,0 +1,121 @@
+@import "_component.scss";
+
+//////?Create Modal
+.DropShadow{
+   display: none;
+   position: absolute;
+   width: 100vw;
+   height: 100vh;
+   z-index: 10;
+}
+.Modal{
+   width: 500px;
+   min-height: 0;
+   background: white;
+   box-shadow: 3px 3px 30px rgb(104, 104, 104);
+   border-radius: 20px;
+   z-index: 13;
+   position: absolute;
+   top: -50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   transition: all .5s ease;
+   padding: 3%;
+   .TitleCart{
+      text-align: center;
+      color: #ED4264;
+      font-size: 23px;
+      padding-bottom: 20px;
+   }
+}
+.YourShopping{
+   display: flex;
+   flex-direction: column;
+   gap: .7em;
+   .ItemCart{
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid rgb(241, 236, 236);
+      padding: 20px 20px;
+      border-radius: $border-radius;
+      &:hover{
+         background: rgb(241, 236, 236);
+      }
+      img{
+         width: 25%;
+         height: 25%;
+         border-radius: $border-radius;
+      }
+      .CaptionCart{
+         align-self: center;
+         h4{
+            letter-spacing: 1.3px;
+         }
+         p{
+            font-size: 13px;
+            text-align: center;
+            color: rgb(166, 161, 161);
+         }
+      }
+      .Counter{
+         align-self: center;
+         font-size: 12px;
+         .NumberOfItem{
+            text-align: center;
+         }
+         .Up i{
+            font-size: 20px;
+            color: lightgray;
+            &:hover{
+               color: black;
+            }
+         }
+         .Down i{
+            font-size: 20px;
+            color: lightgray;
+            &:hover{
+               color: black;
+            }
+         }
+      }
+      .DeleteBtn{
+         align-self: center;
+         button{
+            background: none;
+            i{
+               font-size: 25px;
+               color: rgb(246, 120, 120);
+               &:hover{
+                  color: red;
+               }
+            }
+         }
+      }
+   }
+}
+.FinishShopping{
+   display: flex;
+   justify-content: space-between;
+   width: 90%;
+   margin: auto;
+   padding: 20px 0px 0px 0px;
+   .TotalPrice{
+      padding: 5px;
+      p{
+         color: lightgray;
+         .Price{
+            color: $AddBtn-color;
+         }
+      }
+   }
+}
+.BtnModal{
+   .ClearCartBtn{
+      @include btn-design(red);
+      width: 110px;
+   }
+   .ConfirmBtn{
+      @include btn-design(green);
+      width: 110px;
+   }
+}

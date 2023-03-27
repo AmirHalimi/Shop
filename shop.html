@@ -4,11 +4,76 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="css/styleshop.css">
-   <script src="shop.js"></script>
    <title>House Shop</title>
 </head>
 <body>
+   <!--? Create MOdal of CartShopping -->
+   <div class="DropShadow"></div>
+   <div class="Modal">
+      <div class="TitleCart">
+         <h3>Your Card</h3>
+      </div>
+      <div class="YourShopping">
+         <div class="ItemCart">
+            <img src="picture/4k 1.jpg" alt="">
+            <div class="CaptionCart">
+               <h4>Villa</h4>
+               <p>100$</p>
+            </div>
+            <div class="Counter">
+               <div class="Up">
+                  <i class="fa fa-angle-up"></i>
+               </div>
+               <div class="NumberOfItem">1</div>
+               <div class="Down">
+                  <i class="fa fa-angle-down"></i>
+               </div>
+            </div>
+            <div class="DeleteBtn">
+               <button>
+                  <i class="fa fa-trash-o"></i>
+               </button>
+            </div>
+         </div>
+         <div class="ItemCart">
+            <img src="picture/4k 1.jpg" alt="">
+            <div class="CaptionCart">
+               <h4>Villa</h4>
+               <p>100$</p>
+            </div>
+            <div class="Counter">
+               <div>
+                  <i class="fa fa-angle-up"></i>
+               </div>
+               <div class="NumberOfItem">1</div>
+               <div>
+                  <i class="fa fa-angle-down"></i>
+               </div>
+            </div>
+            <div class="DeleteBtn">
+               <button>
+                  <i class="fa fa-trash-o"></i>
+               </button>
+            </div>
+         </div>
+      </div>
+      <div class="FinishShopping">
+         <div class="TotalPrice">
+            <p>
+               Total Price:
+               <span class="Price">22$</span>
+            </p>
+         </div>
+         <div class="BtnModal">
+            <button class="ClearCartBtn">Clear Card</button>
+            <button class="ConfirmBtn">Confirm</button>
+            <!-- <button class="CloseBtn">Close</button> -->
+         </div>
+      </div>
+   </div>
+   <!--? Create Header Of Page -->
    <header>
       <img class="Bg-header" src="picture/header.jpg" alt="header">
       <div class="Navbar">
@@ -18,18 +83,18 @@
             </h1>
          </div>
          <ul class="Nav">
-               <li>
-                  <a href="#Tophouse-Title">Top</a>
-               </li>
-               <li>
-                  <a href="#">Popular</a>
-               </li>
-               <li class="Cart">
-                  <a href="#">Cart</a>
-               </li>
-               <li>
-                  <a href="#">About Us</a>
-               </li>
+            <li>
+               <a href="#Tophouse-Title">Top</a>
+            </li>
+            <li>
+               <a href="#">Popular</a>
+            </li>
+            <li class="Cart">
+               <a href="#">Cart</a>
+            </li>
+            <li>
+               <a href="#">About Us</a>
+            </li>
          </ul>
       </div>
       <div class="Intro">
@@ -39,6 +104,7 @@
          </h2>
       </div>
    </header>
+      <!--? Create main Of Page -->
    <main>
       <div class="Top">
          <div class="Title">
@@ -57,7 +123,7 @@
                      1000$
                   </h4> -->
                   <p>
-                     This is Caption For this House...
+                     200$
                   </p>
                   <div class="ShopBtn">
                      <button class="BuyBtn">Buy Now</button>
@@ -75,7 +141,7 @@
                      1000$
                   </h4> -->
                   <p>
-                     This is Caption For this House...
+                     200$
                   </p>
                   <div class="ShopBtn">
                      <button class="BuyBtn">Buy Now</button>
@@ -93,7 +159,7 @@
                      1000$
                   </h4> -->
                   <p>
-                     This is Caption For this House...
+                     200$
                   </p>
                   <div class="ShopBtn">
                      <button class="BuyBtn">Buy Now</button>
@@ -111,7 +177,7 @@
                      1000$
                   </h4> -->
                   <p>
-                     This is Caption For this House...
+                     200$
                   </p>
                   <div class="ShopBtn">
                      <button class="BuyBtn">Buy Now</button>
@@ -129,7 +195,7 @@
                      1000$
                   </h4> -->
                   <p>
-                     This is Caption For this House...
+                     200$
                   </p>
                   <div class="ShopBtn">
                      <button class="BuyBtn">Buy Now</button>
@@ -140,5 +206,6 @@
          </div>
       </div>
    </main>
+   <script type="module" src="shop.js"></script>
 </body>
 </html>
