@@ -1,12 +1,14 @@
 @import
 url('https://fonts.googleapis.com/css2?family=Alkatra&family=Overpass:ital,wght@0,400;1,300&display=swap');
 
+
 //////?variables
 $primary-color: #ED4264;
 $secondry-color: #FFEDBC;
-$AddBtn-color: rgb(22, 169, 22);
+$AddBtn-color: rgb(31, 181, 31);
 $linear-gradient: linear-gradient(to right , $primary-color 40%, #FFEDBC);
 $border-radius: 20px;
+
 
 //////?mixin
 @mixin container($width){
@@ -34,5 +36,5 @@ $border-radius: 20px;
    position: absolute;
    top: 50%;
    left: 50%;
-   transform: translate(-50% , -50%);
+   transform: translate(-50%,-50%);
 }
