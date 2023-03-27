@@ -68,6 +68,9 @@ header{
          }
       }
    }
+   .Cart span{
+      color: $primary-color;
+   } 
 }
 
 .Intro{
@@ -144,7 +147,7 @@ main{
    position: absolute;
    border-top-right-radius: $border-radius;
    border-top-left-radius: $border-radius;
-   bottom: -15%;
+   bottom: -17%;
    padding: 15px;
    color: white;
    width: 100%;
